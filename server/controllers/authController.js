@@ -6,6 +6,10 @@ exports.register = (req, res) => {
     // user.save().then(() => {
     //     res.status(200).send({ message: "User registerd successfully." });
     // }).catch((errors) => res.status(400).send({ errors: "Failed to registerd." }));
+    // const user = new User({ number });
+    // user.save().then(() => {
+    //     res.status(200).send({ message: "User registerd successfully." });
+    // }).catch((errors) => res.status(400).send({ errors: "Failed to registerd." }));
     User.findOne({ number: number }).then((userExist) => {
         if (userExist) {
             return res.status(400).send({ errors: "Number already registerd." });
