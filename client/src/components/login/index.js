@@ -1,7 +1,11 @@
-const Login =()=>{
-    return(
+import { NavLink } from "react-router-dom"
+
+const Login = () => {
+    return (
         <>
-        <h1>Login Component</h1>
+            <div className="login-btn">
+              <a href="/login" className="btn btn-secondary btn-lg mt-4">Login</a>
+            </div>
         </>
     )
 }
