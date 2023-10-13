@@ -1,38 +1,99 @@
-.App {
-  text-align: center;
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar-nav li a{
+  color: white;
+  font-size: 20px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar-nav li a:hover{
+  color: red;
 }
+.login-btn{
+  color: black;
+  font-weight: bold;
+}
+.bg-image{
+  background-image: url('../public/images/tinderbackground1.jpeg');
+  width: 100%;
+  background-repeat: repeat;
+  background-size: cover;
+  height: 600px;
+  position: relative;
+}
+/* .bg-image::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 600px;
+  background-color:#0006;
+} */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* .container-sec{
+  background-color: #0006;
+  bottom: 0; 
+  left: 0;
+  right: 0;
+  top: 0;
+  position:static;
+  height:750px;
+} */
+/* .bg-row-color{
+  /* background: repeating-linear-gradient(0deg, #000000c7, #000000d4 100px); */
+  /* height: 100px; */
+
+/* .nav-menu a:hover{
+  color: red;
+}
+.logo img{ 
+  width: 200px;
+  height: 100px;
+}
+.nav-menu {
+    display: flex;
+    justify-content: space-around;
+    gap: 0px;
+    align-items: center;
+    width: 550px;
+    font-size: 20px;
+    font-weight: 500;
+    padding-top: 30px;
+}
+.nav-menu a{
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.left-login-btn{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 35px;
 }
+ .login-btn a{
+  width: 130px;
+    height: 48px;
+    color: black;
+    font-size: bold;
+    font-weight: 700;
+    background: white;
+    border-radius: 25px; */
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* .navbar-section{
+  background-image: url('../public/images/tinderbackground1.jpeg');
+  width: 100%;
+  background-repeat: repeat;
+  background-size: cover;
+  height: 750px;
+} */
+/* .start-text{
+  text-align: center;
+  margin-top: 18%;
 }
+.start-text h1{
+  color:white;
+  font-size: 100px;
+  letter-spacing: 1.5px;
+  font-weight: bold;
+  text-transform: capitalize;
+} */
+

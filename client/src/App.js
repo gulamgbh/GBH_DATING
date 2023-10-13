@@ -1,8 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
-import './App.css';
-
 import { Products, Login, Footer, Header, Dashboard, Learn, Support, Download, Safety, Signup } from './components';
-
+import './App.css'
 
 
 function App() {
