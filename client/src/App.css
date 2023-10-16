@@ -3,13 +3,62 @@
   margin: 0px;
   box-sizing: border-box;
 }
-.navbar-nav li a{
+
+/* header css */
+.navbar-nav .nav-link {
+  color: #fff;
+}
+.navbar-nav .nav-link:hover{
+  color: crimson;
+  text-decoration: underline;
+}
+.dropend .dropdown-toggle {
+  color: #fff;
+  margin-left: 1em;
+}
+.dropdown-menu{
+  background: none;
+  color: #fff;
+}
+.dropdown-menu .dropdown-item{
+  color: #fff;
+  
+}
+
+.dropdown-item:hover {
+  color: crimson;
+  background: none;
+  text-decoration: underline;
+  
+}
+.dropdown .dropdown-menu {
+  display: none;
+}
+.dropdown:hover > .dropdown-menu,
+.dropend:hover > .dropdown-menu {
+  display: block;
+  margin-top: 0.120em;
+  margin-left: 0.120em;
+}
+/* @media screen and (min-width: 769px) {
+  .dropend:hover > .dropdown-menu {
+    position: absolute;
+    top: 0;
+    left: 100%;
+  }
+  .dropend .dropdown-toggle {
+    margin-left: 0.5em;
+  }
+} */
+
+/* header css end */
+/* .navbar-nav li a{
   color: white;
   font-size: 20px;
 }
 .navbar-nav li a:hover{
   color: red;
-}
+} */
 .login-btn{
   color: black;
   font-weight: bold;
@@ -19,81 +68,27 @@
   width: 100%;
   background-repeat: repeat;
   background-size: cover;
-  height: 600px;
+  height: 800px;
   position: relative;
 }
-/* .bg-image::before{
+ .bg-image::before{
   content: '';
   position: absolute;
   width: 100%;
-  height: 600px;
+  height: 800px;
   background-color:#0006;
-} */
+} 
+.start-text{
+     font-size: 130px; 
+    color: rgb(255, 255, 255);
+    width: 100%;
+    /* text-align: center; */
+    /* color: #ffffff; */
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    font-weight: 800;
+}
 
-/* .container-sec{
-  background-color: #0006;
-  bottom: 0; 
-  left: 0;
-  right: 0;
-  top: 0;
-  position:static;
-  height:750px;
-} */
-/* .bg-row-color{
-  /* background: repeating-linear-gradient(0deg, #000000c7, #000000d4 100px); */
-  /* height: 100px; */
-
-/* .nav-menu a:hover{
-  color: red;
-}
-.logo img{ 
-  width: 200px;
-  height: 100px;
-}
-.nav-menu {
-    display: flex;
-    justify-content: space-around;
-    gap: 0px;
-    align-items: center;
-    width: 550px;
-    font-size: 20px;
-    font-weight: 500;
-    padding-top: 30px;
-}
-.nav-menu a{
-  color: white;
-}
-.left-login-btn{
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  gap: 35px;
-}
- .login-btn a{
-  width: 130px;
-    height: 48px;
-    color: black;
-    font-size: bold;
-    font-weight: 700;
-    background: white;
-    border-radius: 25px; */
-
-/* .navbar-section{
-  background-image: url('../public/images/tinderbackground1.jpeg');
-  width: 100%;
-  background-repeat: repeat;
-  background-size: cover;
-  height: 750px;
-} */
-/* .start-text{
-  text-align: center;
-  margin-top: 18%;
-}
-.start-text h1{
-  color:white;
-  font-size: 100px;
-  letter-spacing: 1.5px;
-  font-weight: bold;
-  text-transform: capitalize;
-} */
 
