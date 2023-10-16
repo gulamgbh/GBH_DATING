@@ -1,22 +1,22 @@
 import React from "react"
-const Dashboard=()=>{
-    return(
+const Dashboard = () => {
+    return (
         <>
-       <div className="deshboard-section"style={{ marginTop: '-99px'}} >
-        <div className="container-fluid p-0">
-            <div className="row">
-                <div className="col">
-                    <div className="bg-image">
-                        <img src="" alt=""></img>
-                        <h1 className="text-center text-light " style={{fontSize:'130px',marginTop:'14%'}}>Start somthing apic.</h1>
-                        <div className="creat-btn text-center">
-                        <button type="button" className="btn btn-danger btn-lg  rounded-pill text-light ">Create account</button>
+            <div className="deshboard-section" style={{ marginTop: '-99px' }} >
+                <div className="container-fluid p-0">
+                    <div className="row">
+                        <div className="col">
+                            <div className="bg-image">
+                                <img src="" alt=""></img>
+                                <div className="creat-btn text-center">
+                                    <h1 className="text-center start-text ">Start somthing apic.</h1>
+                                    <button type="button" className="btn btn-danger btn-lg  rounded-pill text-light px-4 w-4" style={{ position: 'absolute', top: '63%', right: '41%',width:'250px' }}>Create account</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-       </div>
         </>
     )
 }
