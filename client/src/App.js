@@ -1,6 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import { Products, Login, Footer, Header, Dashboard, Learn, Support, Download, Safety, Signup } from './components';
 import './App.css'
+import Premiumfetures from './components/Primium features';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path='/download' element={<Download />} />
         <Route path='/login' element={<Login />} />
         <Route path='/signup' element={<Signup />} />
+        <Route path='/Premiumfeatures' element={<Premiumfetures/>}/>
       </Routes>
       <Footer />
     </div>

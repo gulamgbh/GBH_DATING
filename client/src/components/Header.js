@@ -1,5 +1,7 @@
 import React from "react";
-
+import {BsTranslate} from "react-icons/bs";
+import Premiumfetures from "./Primium features";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -7,7 +9,7 @@ const Header = () => {
       <nav class="navbar navbar-expand-lg bg-body-tertiary p-0 sticky-top" style={{ backgroundColor: 'rgb(25 22 22 / 69%)', zIndex: 1 }}>
         <div class="container-fluid">
           <div className="navbar-logo">
-            <a href="/"> <img src=".\images\official-removebg-preview.png" alt="not " style={{ width: 200, height: 100 }}></img></a>
+            <Link to="/"> <img src=".\images\official-removebg-preview.png" alt="not " style={{ width: 200, height: 90 }}></img></Link>
           </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -15,11 +17,11 @@ const Header = () => {
           <div className="collapse navbar-collapse menu fs-5 " id="navbarSupportedContent ">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0 fw-bold">
             <li className="nav-item dropend">
-                <a href="/products" className="nav-link dropdown" >
+                <Link to="/products" className="nav-link dropdown" >
                   Products
-                </a>
+                </Link>
                 <ul className="dropdown-menu fs-5 fw-bold">
-                  <li><a className="dropdown-item" href="#">Community Gidellines</a></li>
+                  <li><Link className="dropdown-item" to='/Premiumfeatures'>Primum Features</Link></li>
                   <li><a className="dropdown-item" href="#">Saftey Tipes</a>
                   <ul style={{listStyle:"none"}}>
                   <li><a className="dropdown-item" href="#">Saftey & Policy</a></li>
@@ -30,12 +32,12 @@ const Header = () => {
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/learn">Learn</a>
+                <Link class="nav-link" to="/learn">Learn</Link>
               </li>
               <li className="nav-item dropend">
-                <a  href="/safety" className="nav-link dropdown"  >
+                <Link  to="/safety" className="nav-link dropdown"  >
                   Saftey
-                </a>
+                </Link>
                 <ul className="dropdown-menu fs-5 fw-bold">
                   <li><a className="dropdown-item" href="#">Community Gidellines</a></li>
                   <li><a className="dropdown-item" href="#">Saftey Tipes</a></li>
@@ -45,20 +47,20 @@ const Header = () => {
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/Support">Support</a>
+                <Link class="nav-link" to="/Support">Support</Link>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/Download">Download</a>
+                <Link class="nav-link" href="/Download">Download</Link>
               </li>
             </ul>
             <div className="col">
               <div className="d-flex float-end text-white mx-4 " role="search">
-                <h3 className=" pr-4">Language</h3>
-                <a href="/login" ><button type="button" className="btn btn-light rounded-pill px-4 login-btn mx-4">Log in</button></a>
+                <h3 className=" px-4"><span className="fs-4"><BsTranslate/></span> Language</h3>
+                <button type="button" className="btn bg-light rounded-pill px-4 px-4 login-btn "><a href="/login" className="text-dark">Log in</a></button>
+                {/* <a href="/login" > type="button" className="btn btn-light rounded-pill px-4 login-btn mx-4"<button>Log in</button></a> */}
               </div>
             </div>
-          </div>
-
+</div>
         </div>
       </nav>
     </>
