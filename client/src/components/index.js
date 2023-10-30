@@ -8,6 +8,6 @@ import Header from './Header'
 import Footer from './Footer'
 import Download from './download'
 import Signup from './Signup'
+import UserDetails from './userDetails'
 
-
-export { Login, Products, Dashboard, Download, Learn, Safety, Support, Header, Footer ,Signup}
+export { Login, Products, Dashboard, Download, Learn, Safety, Support, Header, Footer ,Signup,UserDetails}
