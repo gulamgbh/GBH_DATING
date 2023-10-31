@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
-import { Products, Login, Footer, Header, Dashboard, Learn, Support, Download, Safety, Signup, UserDetails } from './components';
-import './App.css'
+import { Products, Login, Footer, Header, Dashboard, Learn, Support, Download, Safety, Signup, OnBoarding } from './components';
+// import './App.css'
 
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
         <Route path='/download' element={<Download />} />
         <Route path='/login' element={<Login />} />
         <Route path='/signup' element={<Signup />} />
-        <Route path='/userDetails' element={<UserDetails />} />
+        <Route path='/onboarding' element={<OnBoarding />} />
       </Routes>
       <Footer />
     </div>
