@@ -2,13 +2,13 @@ import { FaTiktok, FaTwitter, FaYoutube } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import Slider from "./slider";
+import { NavLink } from "react-router-dom";
 const Footer = () => {
     return (
         <>
-        <section className="slider-ft-section">
-         <Slider/>
-      
-        </section>
+            <section className="slider-ft-section">
+                <Slider />
+            </section>
             <footer className="section bg-footer mt-4" >
                 <div className="container">
                     <div className="row">
@@ -17,10 +17,10 @@ const Footer = () => {
                                 <h6 className="footer-heading text-uppercase text-white">Information</h6>
                                 <ul className="list-unstyled footer-link mt-4">
                                     <span className="fw-bold fs-4">Ligal</span>
-                                    <li><a href>Privacy</a></li>
-                                    <li><a href>Terms</a></li>
-                                    <li><a href>Cookie Policy</a></li>
-                                    <li><a href>Intellectual Property</a></li>
+                                    <li><NavLink to="/">Privacy</NavLink></li>
+                                    <li><NavLink to="/">Terms</NavLink></li>
+                                    <li><NavLink to="/">Cookie Policy</NavLink></li>
+                                    <li><NavLink to="/">Intellectual Property</NavLink></li>
                                 </ul>
                             </div>
                         </div>
@@ -29,9 +29,8 @@ const Footer = () => {
                                 <h6 className="footer-heading text-uppercase text-white">Ressources</h6>
                                 <ul className="list-unstyled footer-link mt-4">
                                     <span className="fw-bold fs-4">Carrers</span>
-                                    <li><a href>Carrers Portal </a></li>
-                                    <li><a href>Tech Blog</a></li>
-
+                                    <li><NavLink to="/">Careers Portal</NavLink></li>
+                                    <li><NavLink to="/">Tech Blog</NavLink></li>
                                 </ul>
                             </div>
                         </div>
@@ -41,45 +40,28 @@ const Footer = () => {
                                 <ul className="list-unstyled footer-link mt-4">
                                     <span className="fw-bold fs-4">Social</span>
                                     <ul className="list-inline d-flex gap-2 fs-3" >
-                                        <li><a href> <FaTiktok /> </a></li>
-                                        <li><a href><FaInstagram /></a></li>
-                                        <li><a href> <FaYoutube /></a></li>
-                                        <li><a href><FaTwitter /> </a></li>
-                                        <li><a href><FaFacebook /></a></li>
+                                        <li><NavLink to="/"><FaTiktok /></NavLink></li>
+                                        <li><NavLink to="/"><FaInstagram /></NavLink></li>
+                                        <li><NavLink to="/"><FaYoutube /></NavLink></li>
+                                        <li><NavLink to="/"><FaTwitter /></NavLink></li>
+                                        <li><NavLink to="/"><FaFacebook /></NavLink></li>
                                     </ul>
                                 </ul>
                             </div>
                         </div>
                         <div className="col-lg-3">
-                            <div className>
-                                <h6 className="footer-heading text-uppercase text-white">Ressources</h6>
-                                <ul className="list-unstyled footer-link mt-4">
-                                    <li><span>FAG</span></li>
-                                    <li><a href>Destination </a></li>
-                                    <li><a href>Press Room</a></li>
-                                    <li><a href>Contact</a></li>
-                                    <li><a href>PromoCode</a></li>
-                                </ul>
-
-                                {/* <div className="mt-5">
-                                    <ul className="list-inline">
-                                        <li className="list-inline-item"><a href="#"><i className="fab facebook footer-social-icon fa-facebook-f" /></a></li>
-                                        <li className="list-inline-item"><a href="#"><i className="fab twitter footer-social-icon fa-twitter" /></a></li>
-                                        <li className="list-inline-item"><a href="#"><i className="fab google footer-social-icon fa-google" /></a></li>
-                                        <li className="list-inline-item"><a href="#"><i className="fab apple footer-social-icon fa-apple" /></a></li>
-                                    </ul>
-
-                            </div> */}
-                            </div>
-
+                            <h6 className="footer-heading text-uppercase text-white">Ressources</h6>
+                            <ul className="list-unstyled footer-link mt-4">
+                                <li><span>FAG</span></li>
+                                <li><NavLink to="/">Destination</NavLink></li>
+                                <li><NavLink to="/">Press Room</NavLink></li>
+                                <li><NavLink to="/">Contact</NavLink></li>
+                                <li><NavLink to="/">PromoCode</NavLink></li>
+                            </ul>
                         </div>
                     </div>
                     <div style={{ borderBottom: '1px solid #80686812', marginTop: '30px', boxShadow: '1px 1px' }}>
-
                     </div>
-                    {/* <div className="text-center mt-5">
-                        <p className="footer-alt mb-0 f-14">2019 © Anup, All Rights Reserved</p>
-                    </div> */}
                     <section className="google-logo d-flex mt-4 gap-3 mb-4">
                         <h2 className="mt-3">Get the app!</h2>
                         <img
@@ -97,7 +79,7 @@ const Footer = () => {
                             ></img>
                         </div>
                     </section>
-                 
+
                     <section className="Cntv(a) My(0)">
                         <p className="Typs(body-3-regular) C($c-ds-text-secondary) Mt(0) Mb(12px)">
                             Single people, listen up: If you’re looking for love, want to start
@@ -124,52 +106,25 @@ const Footer = () => {
                     </div>
                     <section className=" mt-4">
                         <div className="fotter-bottom-list-menu">
-                            <div className="Fl(start)--ml My(8px) D(ib) W(100%)--s hover-list">
-                                <a
-                                    className="C($c-ds-text-brand-normal):h C($c-ds-text-brand-normal):a C($c-ds-text-secondary) focus-outline-style"
-                                    href="/faq"
-                                    itemProp="url"
-                                >
-                                    FAQ
-                                </a>
-                                <span className="D(ib) Mx(8px) C($c-ds-text-secondary)"> / </span>
-                                <a
-                                    className="C($c-ds-text-brand-normal):h C($c-ds-text-brand-normal):a C($c-ds-text-secondary) focus-outline-style"
-                                    href="https://policies.tinder.com/safety?lang=en"
-                                    itemProp="url"
-                                >
-                                    Safety Tips
-                                </a>
-                                <span className="D(ib) Mx(8px) C($c-ds-text-secondary)"> / </span>
-                                <a
-                                    className="C($c-ds-text-brand-normal):h C($c-ds-text-brand-normal):a C($c-ds-text-secondary) focus-outline-style"
-                                    href="https://policies.tinder.com/terms?lang=en"
-                                    itemProp="url"
-                                >
-                                    Terms
-                                </a>
-                                <span className="D(ib) Mx(8px) C($c-ds-text-secondary)"> / </span>
-                                <a
-                                    className="C($c-ds-text-brand-normal):h C($c-ds-text-brand-normal):a C($c-ds-text-secondary) focus-outline-style"
-                                    href="https://policies.tinder.com/cookie-policy?lang=en"
-                                    itemProp="url"
-                                >
-                                    Cookie Policy
-                                </a>
-                                <span className="D(ib) Mx(8px) C($c-ds-text-secondary)"> / </span>
-                                    <a href="">Privacy Setting</a>
-                            </div>
+                            <a>FAQ</a>
+                            <span className="D(ib) Mx(8px) C($c-ds-text-secondary)"> / </span>
+                            <NavLink to="/login">Login</NavLink>
+                            <span className="D(ib) Mx(8px) C($c-ds-text-secondary)"> / </span>
+                            <a>Terms</a>
+                            <span className="D(ib) Mx(8px) C($c-ds-text-secondary)"> / </span>
+                            <a>Cookie Policy</a>
+                            <span className="D(ib) Mx(8px) C($c-ds-text-secondary)"> / </span>
+                            <NavLink to="/">Privacy Setting</NavLink>
                             <div className="Fl(end)--ml My(8px) d-flext float-end">
                                 © 2023 Match Group, LLC, All Rights Reserved.
                             </div>
-                           
                         </div>
                     </section>
                 </div>
             </footer>
-           
+
         </>
     )
 
 }
-export default Footer;
+export default Footer
