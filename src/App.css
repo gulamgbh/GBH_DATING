@@ -462,3 +462,12 @@ h1 {
 .onboarding form .photo-container img {
   width: 100%
 }
+.img-icon svg{
+vertical-align: baseline;
+}
+.info-sec{
+  background: linear-gradient(30deg, rgba(0,97,255,1) 0%, rgba(96,238,255,1) 100%);
+}
+#align-info-text{
+  margin-top: 11px;
+}

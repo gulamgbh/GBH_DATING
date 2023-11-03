@@ -1,15 +1,30 @@
-import Products from './product'
-import Learn from './learn'
-import Safety from './safety'
+import Products from './pages/product'
+import Learn from './pages/learn'
+import Safety from './pages/safety'
 import Dashboard from './dashboard'
-import Support from './support'
+import Support from './pages/support'
+import PremiumFeatures from './pages/Primium features'
 import Header from './Header'
-import Footer from './Footer'
-import Download from './download'
-import Signup from './Signup'
-import Onboarding from './Signup/Onboarding'
+import Download from './pages/download'
+import Onboarding from './auth/Signup/Onboarding'
 import Login from './auth/login'
+import ChatBot from './chatbot'
+import Matches from './chatbot/matches'
+import Messages from './chatbot/message'
 
 
-
-export { Login, Onboarding, Products, Dashboard, Download, Learn, Safety, Support, Header, Footer, Signup }
+export {
+    Matches,
+    Messages,
+    PremiumFeatures,
+    Login,
+    ChatBot,
+    Onboarding,
+    Products,
+    Dashboard,
+    Download,
+    Learn,
+    Safety,
+    Support,
+    Header
+}

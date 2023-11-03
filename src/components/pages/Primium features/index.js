@@ -1,5 +1,6 @@
 import React from 'react'
 import { AiFillStar } from 'react-icons/ai'
+import Footer from '../../Footer';
 
 
 const Premiumfetures = () => {
@@ -70,12 +71,11 @@ const Premiumfetures = () => {
                             <div className="right-data-image mt-5" style={{margin:'0px auto',textAlign:'center'}}>
                                 <img src="..\images\primiumimg1.PNG" alt="not img" style={{height:'550px',width:'350px'}} ></img>
                             </div>
-
                         </div>
                     </div>
                 </div>
             </div>
-
+<Footer />
         </>
 
     )

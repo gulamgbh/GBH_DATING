@@ -3,7 +3,6 @@ import GoogleButton from 'react-google-button'
 import { Link, useNavigate } from 'react-router-dom'
 import { ButtonComponents, FormInputModule, FormLabelModule } from '../../global commponents/FormComponents'
 import { useState } from 'react'
-import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { googleSigin, userLogin } from '../../../redux/action/userAuth.action'
 
@@ -12,11 +11,7 @@ const Login = () => {
     const dispatch = useDispatch()
     const navigate = useNavigate();
     const [number, setNumber] = useState()
-    useEffect(() => {
-        setTimeout(() => {
-            window.location.reload();
-        }, 15000);
-    }, [])
+    
     function getInput(e) {
         e.preventDefault();
         const userNumber = {
@@ -29,7 +24,7 @@ const Login = () => {
     }
     if (auth.authenticate) {
         setTimeout(() => {
-            return navigate("/onboarding");
+            return navigate("/chetbot");
         }, "3000");
     }
     return (

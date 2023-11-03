@@ -8,7 +8,7 @@ const initialState = {
     email: '',
     avtar: '',
     role: '',
-    contact_number: '',
+    number: '',
   },
   authenticate: false,
   authenticating: true,
@@ -70,25 +70,26 @@ const authReducer = (state = initialState, action) => {
       }
       break;
 
-    case authConstants.REGISTER_REQUEST:
+    case authConstants.CREATE_ACCOUNT_REQUEST:
       state = {
         ...state,
         loading: true
       }
       break;
-    case authConstants.REGISTER_SUCCESS:
+    case authConstants.CREATE_ACCOUNT_SUCCESS:
       state = {
         message: action.payload.message,
         loading: false
       }
       break;
-    case authConstants.REGISTER_FAILURE:
+    case authConstants.CREATE_ACCOUNT_FAILURE:
       state = {
         ...state,
-        error: action.payload.error,
+        errors: action.payload.error,
         loading: true
       }
       break;
+    
 
     // case authConstants.UPDATE_PROFILE_REQUEST:
     //   state = {

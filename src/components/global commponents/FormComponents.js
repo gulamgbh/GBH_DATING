@@ -15,7 +15,7 @@ const FormInputModule = (props) => {
     return (
         <input
             style={props.style}
-            ref={props.ref}
+            required={props.required}
             onClick={props.onClick}
             checked={props.checked}
             defaultValue={props.dv}

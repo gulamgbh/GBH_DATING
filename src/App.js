@@ -1,7 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
-import { Products, Footer, Header, Dashboard, Learn, Support, Download, Safety, Signup, Onboarding, Login } from './components';
+import { Products, Header, Dashboard, Learn, Support, Download, Safety, Onboarding, Login, ChatBot, PremiumFeatures, Matches, Messages } from './components';
 import './App.css'
-import Premiumfetures from './components/Primium features';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { isUserLoggedIn } from './redux/action/userAuth.action';
@@ -21,7 +20,9 @@ function App() {
       <Header />
       <Routes>
         <Route element={<Protected />} >
-          <Route path='/onboarding' element={<Onboarding />} />
+          <Route path='/chetbot' element={<ChatBot />} />
+          <Route path='/matches' element={<Matches />} />
+          <Route path='/messages' element={<Messages />} />
         </Route>
         <Route path='/' element={<Dashboard />} />
         <Route path='/dashboard' element={<Dashboard />} />
@@ -30,12 +31,11 @@ function App() {
         <Route path='/safety' element={<Safety />} />
         <Route path='/support' element={<Support />} />
         <Route path='/download' element={<Download />} />
-        <Route path='/signup' element={<Signup />} />
-        <Route path='/Premiumfeatures' element={<Premiumfetures />} />
+        <Route path='/onboarding' element={<Onboarding />} />
+        <Route path='/Premiumfeatures' element={<PremiumFeatures />} />
 
         <Route path='/login' element={<Login />} />
       </Routes>
-      {window.location.pathname !== '/onboarding' && window.location.pathname !== '/login' ? <Footer /> : ''}
 
     </div>
   );

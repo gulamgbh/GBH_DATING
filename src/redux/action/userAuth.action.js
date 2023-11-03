@@ -39,49 +39,23 @@ export const googleSigin = () => {
     })
   }
 }
-// -----------------------------------------------
-// export const getProfileData = () => {
-//   return async (dispatch) => {
-//     dispatch({
-//       type: authConstants.GET_PROFILE_REQUEST
-//     });
-//     await axios.get(`/getProfile`).then(function (response) {
-//       dispatch({
-//         type: authConstants.GET_PROFILE_SUCCESS,
-//         payload: {
-//           user: response.data.data,
-//           message: response.data.message
-//         }
-//       })
-//     }).catch(function (error) {
-//       dispatch({
-//         type: authConstants.GET_PROFILE_FAILURE,
-//         payload: {
-//           error: error.data.errors,
-//         }
-//       })
-//     });
-//   }
-// }
+
 // ----------------Create User-------------------
-export const registerUser = (adminData) => {
-  const { email, password, confirm_pwd, contact_number, first_name, last_name } = adminData
+export const createAccount = (formData) => {
   return async (dispatch) => {
     dispatch({
-      type: authConstants.REGISTER_REQUEST
+      type: authConstants.CREATE_ACCOUNT_REQUEST
     });
-    await axios.post(`/signup`, {
-      email, password, confirm_pwd, contact_number, first_name, last_name
-    }).then(function (response) {
+    await axios.post('/create-account', formData).then(function (response) {
       dispatch({
-        type: authConstants.REGISTER_SUCCESS,
+        type: authConstants.CREATE_ACCOUNT_SUCCESS,
         payload: {
           message: response.data.message
         }
       })
     }).catch(function (error) {
       dispatch({
-        type: authConstants.REGISTER_FAILURE,
+        type: authConstants.CREATE_ACCOUNT_FAILURE,
         payload: {
           error: error.response.data.errors,
         }
