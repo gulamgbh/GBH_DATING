@@ -24,9 +24,10 @@
   color: #fff;
 }
 
-.btn-gradiant{
+.btn-gradiant {
   background: linear-gradient(90deg, hsla(358, 85%, 68%, 1) 0%, hsla(41, 98%, 49%, 1) 100%)
 }
+
 .dropdown-menu .dropdown-item {
   color: #fff;
 
@@ -462,12 +463,19 @@ h1 {
 .onboarding form .photo-container img {
   width: 100%
 }
-.img-icon svg{
-vertical-align: baseline;
+
+.img-icon svg {
+  vertical-align: baseline;
 }
-.info-sec{
-  background: linear-gradient(30deg, rgba(0,97,255,1) 0%, rgba(96,238,255,1) 100%);
+
+.info-sec {
+  background: linear-gradient(30deg, rgba(0, 97, 255, 1) 0%, rgba(96, 238, 255, 1) 100%);
 }
-#align-info-text{
+
+#align-info-text {
   margin-top: 11px;
+}
+
+.chatbot_nav li a:active {
+  color: #000;
 }

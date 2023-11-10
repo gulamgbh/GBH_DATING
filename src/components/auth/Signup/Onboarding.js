@@ -43,14 +43,6 @@ const Onboarding = () => {
     setTimeout(() => {
       return navigate("/login");
     }, "3000");
-    setDob('')
-    setEmail('')
-    setFullName('')
-    setNumber('')
-    setGender('')
-    setLookingFor('')
-    setProfile([])
-    setShowme('')
   }
   return (
 

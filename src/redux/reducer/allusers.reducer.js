@@ -1,7 +1,6 @@
 import { authConstants } from '../action/constants'
 
 const initialState = {
-    profile: {},
     allusers: [],
     loading: true,
     error: null,
@@ -9,20 +8,20 @@ const initialState = {
 };
 const authReducer = (state = initialState, action) => {
     switch (action.type) {
-        case authConstants.GET_PROFILE_REQUEST:
+        case authConstants.GET_USERS_REQUEST:
             state = {
                 ...state,
                 loading: true
             }
             break;
-        case authConstants.GET_PROFILE_SUCCESS:
+        case authConstants.GET_USERS_SUCCESS:
             state = {
-                profile: action.payload.profile,
+                allusers: action.payload.allusers,
                 message: action.payload.message,
                 loading: false
             }
             break;
-        case authConstants.GET_PROFILE_FAILURE:
+        case authConstants.GET_USERS_FAILURE:
             state = {
                 ...state,
                 errors: action.payload.error,

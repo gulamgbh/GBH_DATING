@@ -24,7 +24,7 @@ const Login = () => {
     }
     if (auth.authenticate) {
         setTimeout(() => {
-            return navigate("/chetbot");
+            return navigate("/chetbot/messages");
         }, "3000");
     }
     return (

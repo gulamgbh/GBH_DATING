@@ -1,18 +1,23 @@
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useNavigate } from 'react-router-dom';
 import { Products, Header, Dashboard, Learn, Support, Download, Safety, Onboarding, Login, ChatBot, PremiumFeatures, Matches, Messages } from './components';
 import './App.css'
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { isUserLoggedIn } from './redux/action/userAuth.action';
 import Protected from './HOC';
+import Chatbox from './components/chatbot/chatbox/Chatbox';
+import Gbh from './components/chatbot/chatbox/Chatbox';
+import GbhChatPanel from './components/gbhchat';
 
 
 function App() {
+  const nevigate = useNavigate()
   const auth = useSelector(state => state.userAuth);
   const dispatch = useDispatch()
   useEffect(() => {
     if (!auth.authenticate) {
       dispatch(isUserLoggedIn());
+      nevigate('/chetbot')
     }
   }, [])
   return (
@@ -20,9 +25,10 @@ function App() {
       <Header />
       <Routes>
         <Route element={<Protected />} >
-          <Route path='/chetbot' element={<ChatBot />} />
-          <Route path='/matches' element={<Matches />} />
-          <Route path='/messages' element={<Messages />} />
+          <Route path='/chetbot' element={<GbhChatPanel />} />
+          {/* <Route path='/chetbot/matches' element={<Matches />} />
+          <Route path='/chetbot/messages' element={<Messages />} />
+          <Route path='/chetbot/box' element={<Chatbox />} /> */}
         </Route>
         <Route path='/' element={<Dashboard />} />
         <Route path='/dashboard' element={<Dashboard />} />

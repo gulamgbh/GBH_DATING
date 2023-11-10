@@ -1,8 +1,12 @@
 import React from 'react'
+import ChatBot from '..'
 
 const Matches = () => {
   return (
-    <div>Matches</div>
+    <ChatBot >
+      <div>Matches</div>
+    </ChatBot >
+    
   )
 }
 
