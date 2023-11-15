@@ -1,7 +1,9 @@
 import { authConstants } from '../action/constants'
 
 const initialState = {
-    allusers: [],
+    allusers: [
+    
+    ],
     loading: true,
     error: null,
     message: ''

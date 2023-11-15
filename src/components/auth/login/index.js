@@ -5,13 +5,13 @@ import { ButtonComponents, FormInputModule, FormLabelModule } from '../../global
 import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { googleSigin, userLogin } from '../../../redux/action/userAuth.action'
-
+import { GoogleLogin } from '@react-oauth/google';
 const Login = () => {
     const auth = useSelector(state => state.userAuth);
     const dispatch = useDispatch()
     const navigate = useNavigate();
     const [number, setNumber] = useState()
-    
+
     function getInput(e) {
         e.preventDefault();
         const userNumber = {
@@ -24,7 +24,7 @@ const Login = () => {
     }
     if (auth.authenticate) {
         setTimeout(() => {
-            return navigate("/chetbot/messages");
+            return navigate("/chetbot");
         }, "3000");
     }
     return (
@@ -64,6 +64,17 @@ const Login = () => {
                                     onClick={handleClick}
                                 />
                             </div>
+                            {/* <div className='d-flex justify-content-center'>
+                                <GoogleLogin
+                                    clientId="81334359658-v2656joi94689flu95e0t1denh6fdgft.apps.googleusercontent.com"
+                                    onSuccess={credentialResponse => {
+                                        console.log(credentialResponse);
+                                    }}
+                                    onError={() => {
+                                        console.log('Login Failed');
+                                    }}
+                                />
+                            </div> */}
                         </div>
                     </div>
                 </div>

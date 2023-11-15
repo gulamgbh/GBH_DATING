@@ -1,18 +1,13 @@
-import React from 'react'
-import ChatHeader from './profile-header/ChatHeader'
-import ChatMenu from './profile-header/ChatMenu'
-import ChatPanel from './chatpanal'
+import React, { useEffect } from 'react'
+import LeftLayout from './layouts/LeftLayout'
+import RightLayout from './layouts/RightLayout'
 
 const GbhChatPanel = () => {
+    
     return (
         <div className='row'>
-            <div className='col-md-3'>
-                <ChatHeader />
-                <ChatMenu />
-            </div>
-            <div className='col-md-9 border d-flex justify-content-center'>
-                <ChatPanel />
-            </div>
+            <LeftLayout />
+            <RightLayout />
         </div>
     )
 }

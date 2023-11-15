@@ -5,6 +5,7 @@ import { BiGift } from 'react-icons/bi';
 import { FiMoreVertical } from 'react-icons/fi';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
+import MenuWithItemsBox from '../drower/MenuWithItemsBox'
 const IconMenu = () => {
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
@@ -20,22 +21,16 @@ const IconMenu = () => {
             {/* <div id="align-info-text"><BsShield size={30} /></div> */}
             <div id="align-info-text" style={{ padding: "0px 5px" }}><BiGift size={30} /></div>
             <div id="align-info-text" style={{ padding: "0px 5px" }} onClick={handleClick}><FiMoreVertical size={30} /></div>
-            <Menu
-                id="basic-menu"
+            <MenuWithItemsBox
                 anchorEl={anchorEl}
                 open={open}
                 onClose={handleClose}
-                MenuListProps={{
-                    'aria-labelledby': 'basic-button',
-                }}
-                transformOrigin={{
-                    horizontal:'right',
-                    vertical:"top"
-                }}
-            >
-                <MenuItem onClick={handleClose}>Profile</MenuItem>
-                <MenuItem onClick={handleClose}>My account</MenuItem>
-            </Menu>
+                onClick={handleClose}
+                menuItems1={'Profile'}
+                menuItems2={'My account'}
+                transHori={'right'}
+                transVer={'top'}
+            />
         </div>
 
     )
