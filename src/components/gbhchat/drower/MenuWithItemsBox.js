@@ -1,6 +1,6 @@
 import { Menu, MenuItem, styled } from '@mui/material'
-import React from 'react'
 import { CiImageOn } from "react-icons/ci";
+import React from 'react'
 
 const MenuWithItemsBox = (props) => {
     return (

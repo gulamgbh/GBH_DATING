@@ -18,7 +18,7 @@ const ChatHeader = () => {
     }, [])
 
     return (
-        <div className='row info-sec pt-3'>
+        <div className='row info-sec py-3'>
             <div className='col-md-1'></div>
             <div className='col-md-3 d-flex justify-content-center px-2' >
                 <img
@@ -29,7 +29,7 @@ const ChatHeader = () => {
                     height={50}
                     onClick={() => toggleDrawer()}
                 />
-                <h6 id="align-info-text " className='p-2'>{userInfo.profile.fullname}</h6>
+                <h6 id="align-info-text " className='p-2 text-capitalize'>{userInfo.profile.fullname}</h6>
             </div>
             <IconMenu />
             <ProfileDrower open={openDrawer} setOpen={setOpenDrawer}/>

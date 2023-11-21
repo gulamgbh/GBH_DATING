@@ -2,12 +2,13 @@ import { Route, Routes, useNavigate } from 'react-router-dom';
 import { Products, Header, Dashboard, Learn, Support, Download, Safety, Onboarding, Login, ChatBot, PremiumFeatures, Matches, Messages } from './components';
 import './App.css'
 import { useDispatch, useSelector } from 'react-redux';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { isUserLoggedIn } from './redux/action/userAuth.action';
 import Protected from './HOC';
 import Chatbox from './components/chatbot/chatbox/Chatbox';
 import Gbh from './components/chatbot/chatbox/Chatbox';
 import GbhChatPanel from './components/gbhchat';
+import { getUsersMessage } from './redux/action/conversation.action';
 
 
 function App() {
@@ -19,7 +20,9 @@ function App() {
       dispatch(isUserLoggedIn());
       nevigate('/chetbot')
     }
+    dispatch(getUsersMessage())
   }, [])
+
   return (
     <div className="App">
       <Header />
